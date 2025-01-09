@@ -28,12 +28,12 @@ const CategoryMenu = () => {
 
   return (
  
-    <div className="mt-6 mx-10">
-    <h1 className="text-xl font-semibold">Find the Delicious Food</h1>
-    <div className="flex gap-4 my-3">
+    <div className="md:mt-6 mt-2 md:mx-10 mx-2">
+    <h1 className="md:text-xl md:font-semibold">Find the Delicious Food</h1>
+    <div className="flex md:gap-4 gap-2 md:my-3 my-1">
      
           <button onClick={()=>dispatch(setCategory("All" ))}
-         className={`py-1 px-3 text-white font-semibold bg-slate-500 rounded hover:bg-green-400 ${
+         className={`md:py-1 md:px-3 px-1 text-white md:font-semibold bg-slate-500 rounded hover:bg-green-400 ${
             selectedCategory === "All" ? "bg-green-500" : ""}`}>
         
         All
@@ -43,7 +43,7 @@ const CategoryMenu = () => {
         {categories.map((category, index) =>{
         return (
           <button onClick={()=>dispatch(setCategory(category))}
-        key={index} className={`py-1 px-3 text-white font-semibold bg-slate-500 rounded hover:bg-green-400 ${selectedCategory === category ? "bg-green-500" : ""}`}>
+        key={index} className={`md:py-1 md:px-3 py-[2px] px-2 text-white md:font-semibold bg-slate-500 rounded hover:bg-green-400 ${selectedCategory === category ? "bg-green-500" : ""}`}>
           {category}
         </button>
         )

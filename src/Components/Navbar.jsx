@@ -7,10 +7,10 @@ const Navbar = ({children}) => {
     <>
 
    
-    <nav className='py-4 px-10  bg-slate-100  w-full flex justify-between items-center drop-shadow'>
+    <nav className='md:py-4 py-2 md:px-10 px-2  bg-slate-100  w-full flex justify-between items-center drop-shadow'>
         <div>
             <h3 className=''>{new Date().toUTCString().slice(0,16)}</h3>
-            <h1 className='text-slate-700 font-semibold text-xl'>Flovour FoodsItems</h1>
+            <h1 className='text-slate-700 md:font-semibold md:text-xl'>Flovour FoodsItems</h1>
         </div>
         <div>
             <input
@@ -19,7 +19,7 @@ const Navbar = ({children}) => {
             id=''
             placeholder='search hera items'
             autoComplete='off'
-            className='p-2 border border-grey-400 rounded-md'
+            className='md:p-2 p-1 border border-grey-400 rounded-md'
             onChange={(e)=>dispatch(setSearch(e.target.value))}
             />
         </div>

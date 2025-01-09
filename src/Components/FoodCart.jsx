@@ -133,7 +133,7 @@ const FoodCart = () => {
   const category = useSelector((state) => state.category.category);
   const search = useSelector((state)=>state.search.search)
   return (
-    <div className="grid grid-cols-4 gap-8 my-4">
+    <div className="grid md:grid-cols-4 grid-col-1 md:gap-8 gap-3 md:my-4">
       {FoodData.filter((food) => {
         // Filter items based on selected category
         if (category === "All")
@@ -153,14 +153,14 @@ const FoodCart = () => {
           <img
             src={item.img}
             alt={item.name}
-            className="h-[300px] w-full rounded-t hover:scale-105 cursor-grab transition-all duration-300 ease-in-out"
+            className="md:h-[300px] h-[200px] w-full rounded-t hover:scale-105 cursor-grab transition-all duration-300 ease-in-out"
           />
-          <div className="flex my-2">
-            <label className="py-2 px-4 my-2 text-xl font-semibold mx-auto">
+          <div className="flex md:my-2 my-1">
+            <label className="md:py-2 py-1 md:px-4 px-2 md:my-2 my-1 md:text-xl md:font-semibold md:mx-auto">
               {item.name}
               <p>{item.category}</p>
             </label>
-            <label className="py-2 px-4 my-2 text-red-500 mx-auto font-semibold">
+            <label className="md:py-2 py-1 md:px-4 px-2 md:my-2 my-1 text-red-500m md:mx-auto font-semibold">
               Price: ${item.price}
             </label>
           </div>
